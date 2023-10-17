@@ -147,5 +147,28 @@ li i {
     display: none; /* Ocultar inicialmente */
     padding: 10px; /* Espaciado interno opcional */
     flex-direction: column;
+    border-radius: 5%;
+    
 }
 
+ol {
+        list-style: none; /* Elimina la numeración de la lista */
+        padding: 0; /* Elimina el espacio interno de la lista */
+        margin: 0; /* Elimina el espacio externo de la lista */
+    }
+    
+.preciototal{
+    
+    background-color: blue;
+    color: rgb(230, 230, 126);
+}
+
+.finalizarCompra{
+    background-color:green;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 30%;
+    display:flex;
+   
+}

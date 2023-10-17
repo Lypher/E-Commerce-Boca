@@ -67,29 +67,35 @@ const mostrarProductos = productos => productos.forEach(producto => plantillaPro
           agregarAlCarrito.setAttribute("data-product-id", index); // Usaremos el índice del producto como ID
 
           //AGREGAR AL CARRITO:
-          agregarAlCarrito.onclick = function agregarAlCarrito(){
-              carrito.push(producto)
-              alert(producto.nombre + " agregado al carrito")
-
-              const carritoMostrar = []
-
-              carrito.forEach((producto) => {
+          agregarAlCarrito.onclick = function agregarAlCarrito() {
+            
+            const carritoDOM = document.getElementsByClassName("carritoOculto");
+            for (let i = 0; i < carritoDOM.length; i++) {
+            carritoDOM[i].style.display = "none"}
+            // Haz una copia del producto
+            const productoCopia = { ...producto };
+        
+            // Agrega la copia al carrito
+            carrito.push(productoCopia);
+        
+            alert(productoCopia.nombre + " agregado al carrito");
+        
+            const carritoMostrar = []
+        
+            carrito.forEach((producto) => {
                 carritoMostrar.push(producto.nombre);
-              });
+            });
         
-              const olCarrito = document.getElementsByClassName("olCarrito")[0]; // Obtén el primer elemento de la colección
+            const olCarrito = document.getElementsByClassName("olCarrito")[0]; // Obtén el primer elemento de la colección
         
-              if (olCarrito) {
-          
-                  carritoMostrar.forEach((nombre) => {
-                      const li = document.createElement("li");
-                      li.textContent = nombre;
-                      olCarrito.appendChild(li);
-                  });
-                  
-              } 
-              
-          }
+            if (olCarrito) {
+                carritoMostrar.forEach((nombre) => {
+                    const li = document.createElement("li");
+                    li.textContent = nombre;
+                    olCarrito.appendChild(li);
+                });
+            }
+        }
           li.appendChild(agregarAlCarrito);
           
 
@@ -130,31 +136,55 @@ const mostrarProductos = productos => productos.forEach(producto => plantillaPro
     }
   });
 
-  function MostrarCarrito(){
+  function MostrarCarrito() {
+    console.log("MostrarCarrito() llamada");
 
-    const carritoDOM = document.getElementsByClassName("carritoOculto")
+    const carritoDOM = document.getElementsByClassName("carritoOculto");
     for (let i = 0; i < carritoDOM.length; i++) {
         if (carritoDOM[i].style.display === "none" || carritoDOM[i].style.display === "") {
-          carritoDOM[i].style.display = "flex";
+            carritoDOM[i].style.display = "flex";
         } else {
-          carritoDOM[i].style.display = "none";
+            carritoDOM[i].style.display = "none";
         }
-      }
-      
+    }
 
-     
-      //const PrecioFinal = []
+    const olCarrito = document.getElementsByClassName("olCarrito")[0]; // Obtén el primer elemento de la colección
 
-    
-  }
-    
-    
-     // alert(JSON.stringify(carritoMostrar))
+    // Borra el contenido existente de olCarrito
+    olCarrito.innerHTML = '';
 
-   // carrito.forEach((producto) => {
-     //   PrecioFinal.push(producto.precio);
-     // });
-     // const sumaTotal = PrecioFinal.reduce((acumulador, numero) => acumulador + numero, 0);
-    //  alert(JSON.stringify(sumaTotal))
-      
-  
+    const carritoMostrar = [];
+    let precioTotal = 0; // Inicializa el precio total en 0
+
+    carrito.forEach((producto) => {
+        carritoMostrar.push({nombre: producto.nombre, precio: producto.precio});
+        precioTotal += producto.precio; // Agrega el precio del producto al precio total
+    });
+
+    if (carritoMostrar.length === 0) {
+        // Si el carrito está vacío, muestra un mensaje "Carrito vacío"
+        const parrafoVacio = document.createElement("p");
+        parrafoVacio.textContent = "(Carrito vacío)";
+        olCarrito.appendChild(parrafoVacio);
+    } else {
+        // Si el carrito no está vacío, muestra los elementos del carrito
+        carritoMostrar.forEach((nombre) => {
+            const li = document.createElement("li");
+            li.textContent =  `${nombre.nombre} ($${nombre.precio})`;
+            olCarrito.appendChild(li);
+        });
+
+        // Muestra el precio total
+        const liPrecioTotal = document.createElement("li");
+        liPrecioTotal.textContent = `Precio Total: $${precioTotal}`;
+        liPrecioTotal.className = "preciototal"
+        olCarrito.appendChild(liPrecioTotal);
+
+        const botonComprar = document.createElement("button")
+        botonComprar.textContent = "Finalizar Compra"
+        botonComprar.className = "finalizarCompra"
+        olCarrito.appendChild(botonComprar)
+    }
+}
+
+
