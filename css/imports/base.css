@@ -1,0 +1,28 @@
+@import url("libs.css");
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    
+}
+
+img{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}

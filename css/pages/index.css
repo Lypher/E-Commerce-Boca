@@ -1,0 +1,151 @@
+/* Estilos para la lista de artículos */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Estilos para las imágenes de los artículos */
+li img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para los títulos de los artículos */
+li h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilos para los enlaces "Ver más" */
+li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+li .ver-mas{
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+li .ver-mas:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Estilos para los íconos de "Ver más" */
+li i {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+
+.header{
+    background-color: rgba(0, 0, 255, 0.774);
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-titulo{
+    display: flex;
+    justify-content: space-around;
+}
+.titulo{
+    color: yellow;
+    font-size: medium;
+}
+.subtitulo{
+    display: flex;
+    color: yellow;
+    font-size:x-small;
+}
+
+.section-camiseta-titu{
+    display: flex;
+    justify-content: center;
+}
+
+.section-short-titu{
+    display: flex;
+    justify-content: center;
+}
+.section-camiseta-sup{
+    display: flex;
+    justify-content: center;
+}
+.section-short-sup{
+    display: flex;
+    justify-content: center;
+}
+.section-buzo-entr{
+    display: flex;
+    justify-content: center;
+}
+.section-campera{
+    display: flex;
+    justify-content: center;
+}
+.section-camperon{
+    display: flex;
+    justify-content: center;
+}
+.section-buzo-gris{
+    display: flex;
+    justify-content: center;
+}
+.ul-footer{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.h5-footer {
+    font-size: xx-small;
+    position: fixed;
+    bottom: 0;
+}
+.agregar{
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    height: 35px;
+    color: white;
+}
+.carritoOculto {
+    position: absolute; /* Cambia a posición fija para superponerse a otros elementos */
+    top: 1;
+    right: 0;
+    background-color: #fff; /* Establece un fondo para el menú */
+    border: 1px solid #000; /* Agrega un borde opcional */
+    z-index: 1; /* Asegura que esté sobre otros elementos */
+    display: none; /* Ocultar inicialmente */
+    padding: 10px; /* Espaciado interno opcional */
+    flex-direction: column;
+}
+

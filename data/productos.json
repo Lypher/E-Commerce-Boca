@@ -1,0 +1,67 @@
+[
+    {   
+        "id":1,
+        "nombre": "Camiseta titular",
+        "precio": 30000,
+        "imagen": "./assets/img/camiseta-boca-betsson-300x300.png",
+        "descripcion": "Esta nueva camiseta titular de Boca Juniors adidas une la pasión y el barrio con diferentes tonos que logran un efecto visual y una prominente franja central que resaltan sus colores, el azul y oro Un diseño innovador para un equipo en constante evolución. Su tejido ligero, los modernos paneles de mesh y la tecnología de absorción AEROREADY se combinan para mantener cómodos a los hinchas del club.",
+        "marca": "Adidas"
+    },
+    {
+        "id":2,
+        "nombre": "Short titular",
+        "precio": 17000,
+        "imagen": "./assets/img/short-boca-titular-300x300.jpeg",
+        "descripcion": "Completá el uniforme titular del xeneize. Estos shorts de fútbol de Boca Juniors adidas son los que usan los jugadores cuando juegan en La Bombonera. La tecnología de absorción AEROREADY mantendrá tu cuerpo seco ya sea que estés entrenando o alentando por tu equipo favorito. El escudo bordado deja claro dónde está tu lealtad. Cintura elástica con cordón de ajuste.",
+        "marca": "Adidas"
+    },
+    {
+        "id":3,
+        "nombre": "Camiseta suplente",
+        "precio": 27000,
+        "imagen": "./assets/img/camiseta-suplente-boca-300x300.png",
+        "descripcion": "Inspirada en una icónica camiseta de Boca de mediados de los años 50. Creada para mantener cómodos a los hinchas, incorpora tecnología de absorción AEROREADY y está hecha de tejido suave. En la parte posterior del cuello se encuentra la inscripción XENEIZE. Hecho con materiales 100% reciclados, este producto representa solo una de nuestras soluciones para acabar con los residuos plásticos. Ajuste clásico.Cuello redondo acanalado.",
+        "marca": "Adidas"
+    },
+    {
+        "id":4,
+        "nombre": "Short suplente",
+        "precio": 15000,
+        "imagen": "./assets/img/short-boca-suplente-300x300.jpeg",
+        "descripcion": "Short alternativo de Boca Juniors. Poseen paneles de malla para ventilación y cortes laterales para brindar comodidad dentro y fuera de la cancha. Incorporan tecnología de absorción AEROREADY que se encarga de mantener tu piel seca sin importar si estás jugando un partido con amigos o alentando a tu club desde la tribuna. Hecho con materiales 100% reciclados, este producto representa solo una de nuestras soluciones para acabar con los residuos plásticos" ,
+        "marca": "Adidas"
+    },
+    {
+        "id":5,
+        "nombre": "Buzo de entrenamiento",
+        "precio": 29999,
+        "imagen": "./assets/img/buzo-entrenamiento-300x300.png",
+        "descripcion": "La Bombonera es testigo a toda la acción. Pero es en el campo de entrenamiento en donde verdaderamente se define el marcador. Hecho para jóvenes- este buzo de entrenamiento de fútbol adidas en tejido absorbente está basado en el que usan los jugadores de Boca Juniors mientras se preparan para enfrentar a sus rivales. Tiene aberturas para el pulgar en los puños para mantener las mangas en su lugar y protegerte más del frío.",
+        "marca": "Adidas"
+    },
+    {
+        "id":6,
+        "nombre": "Buzo mujeres",
+        "precio": 285000,
+        "imagen": "./assets/img/buzo-boca-mujeres-300x300.jpeg",
+        "descripcion": "Entrená como si fueras una de las estrellas de Boca Juniors. Este buzo de entrenamiento de fútbol adidas es otra versión de la camiseta que usan los jugadores del club. La tecnología de absorción AEROREADY mantiene tu cuerpo seco sin importar cuánto te esforcés. El escudo del club te recuerda a dónde podés llegar si entrenás.",
+        "marca": "Adidas"
+    },
+    {
+        "id":7,
+        "nombre": "Buzo gris",
+        "precio": 24000,
+        "imagen": "./assets/img/buzo-boca-gris-300x300.jpeg",
+        "descripcion": "Descubrí el Buzo Fútbol adidas Boca Gr Hombre y llevá tu pasión por el fútbol al siguiente nivel. Este buzo con capucha está confeccionado con material de algodón suave y de alta calidad, brindándote comodidad durante todo el día. Su diseño moderno y elegante se combina a la perfección con un bolsillo canguro frontal, que te permite guardar tus objetos personales de forma segura. Ya sea para animar al club de tus amores en el estadio o para lucir un estilo deportivo único en tu día a día, este buzo es perfecto para vos, no esperes más y destacate con auténtico espíritu Xeneize.",
+        "marca": "Adidas"
+    },
+    {
+        "id":8,
+        "nombre": "Camperon",
+        "precio": 45000,
+        "imagen": "./assets/img/camperon-boca-300x300.jpg",
+        "descripcion": "Cuando el clima no esté de tu lado, usá esta campera de invierno de fútbol adidas. Cuenta con aislamiento térmico, como capucha con forro de felpa y dobladillo alargado, para que mantengás el frío a raya. El escudo y los colores de Boca Juniors brillarán hasta en los días más fríos.",
+        "marca": "Adidas"
+    }
+    
+]
