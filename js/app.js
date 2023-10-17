@@ -183,6 +183,10 @@ const mostrarProductos = productos => productos.forEach(producto => plantillaPro
         const botonComprar = document.createElement("button")
         botonComprar.textContent = "Finalizar Compra"
         botonComprar.className = "finalizarCompra"
+        botonComprar.onclick = finalizarCompra = () =>{
+          alert("Compra Realizada con exito!")
+          location.reload()
+        }
         olCarrito.appendChild(botonComprar)
     }
 }

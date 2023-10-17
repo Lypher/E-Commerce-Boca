@@ -61,28 +61,43 @@ li i {
 }
 
 
-.header{
+.header {
     background-color: rgba(0, 0, 255, 0.774);
     width: 100vw;
     height: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Usamos 'space-between' para separar los elementos del encabezado */
     align-items: center;
-}
-
-.contenedor-titulo{
-    display: flex;
-    justify-content: space-around;
-}
-.titulo{
+    padding: 0 20px; /* Agregamos espacio a los lados del encabezado */
+  }
+  
+  .titulo {
     color: yellow;
-    font-size: medium;
-}
-.subtitulo{
-    display: flex;
+    font-size: 24px; /* Ajusta el tamaño del título para pantallas más grandes */
+  }
+  
+  .subtitulo {
     color: yellow;
-    font-size:x-small;
-}
+    font-size: 12px; /* Ajusta el tamaño del subtítulo para pantallas más grandes */
+  }
+  
+  /* Media queries para hacer el encabezado responsive */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Apilamos los elementos en pantallas pequeñas */
+      height: auto; /* Dejamos que el alto se ajuste al contenido */
+      text-align: center; /* Centramos el texto en el centro */
+      padding: 20px; /* Agregamos espacio superior e inferior para dispositivos móviles */
+    }
+  
+    .titulo {
+      font-size: 20px; /* Disminuimos el tamaño del título para pantallas más pequeñas */
+    }
+  
+    .subtitulo {
+      font-size: 12px; /* Mantenemos el tamaño del subtítulo */
+    }
+  }
 
 .section-camiseta-titu{
     display: flex;
@@ -171,4 +186,9 @@ ol {
     margin-left: 30%;
     display:flex;
    
+}
+
+#carrito{
+    color: white;
+    margin-right: 15px;
 }
