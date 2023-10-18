@@ -66,37 +66,39 @@ li i {
     width: 100vw;
     height: 4rem;
     display: flex;
-    justify-content: space-between; /* Usamos 'space-between' para separar los elementos del encabezado */
+    justify-content: space-between; 
     align-items: center;
-    padding: 0 20px; /* Agregamos espacio a los lados del encabezado */
+    padding: 0 20px; 
   }
   
   .titulo {
     color: yellow;
-    font-size: 24px; /* Ajusta el tamaño del título para pantallas más grandes */
+    font-size: 24px; 
   }
   
   .subtitulo {
     color: yellow;
-    font-size: 12px; /* Ajusta el tamaño del subtítulo para pantallas más grandes */
+    font-size: 12px; 
   }
   
   /* Media queries para hacer el encabezado responsive */
-  @media (max-width: 768px) {
+  @media (max-width: 768px) {    
     .header {
-      flex-direction: column; /* Apilamos los elementos en pantallas pequeñas */
-      height: auto; /* Dejamos que el alto se ajuste al contenido */
-      text-align: center; /* Centramos el texto en el centro */
-      padding: 20px; /* Agregamos espacio superior e inferior para dispositivos móviles */
+      flex-direction: column; 
+      height: auto; 
+      text-align: center; 
+      padding: 20px; 
     }
   
     .titulo {
-      font-size: 20px; /* Disminuimos el tamaño del título para pantallas más pequeñas */
+      font-size: 20px; 
     }
   
     .subtitulo {
-      font-size: 12px; /* Mantenemos el tamaño del subtítulo */
+      font-size: 12px; 
     }
+   
+   
   }
 
 .section-camiseta-titu{
@@ -137,11 +139,12 @@ li i {
     justify-content: space-evenly;
     list-style: none;
     text-decoration: none;
+    margin-top: 3px;
     
 }
 .h5-footer {
     font-size: xx-small;
-    position: fixed;
+    position:fixed;
     bottom: 0;
 }
 .agregar{
@@ -153,23 +156,23 @@ li i {
     color: white;
 }
 .carritoOculto {
-    position: absolute; /* Cambia a posición fija para superponerse a otros elementos */
+    position: absolute; 
     top: 1;
     right: 0;
-    background-color: #fff; /* Establece un fondo para el menú */
-    border: 1px solid #000; /* Agrega un borde opcional */
-    z-index: 1; /* Asegura que esté sobre otros elementos */
-    display: none; /* Ocultar inicialmente */
-    padding: 10px; /* Espaciado interno opcional */
+    background-color: #fff; 
+    border: 1px solid #000; 
+    z-index: 1; 
+    display: none; 
+    padding: 10px; 
     flex-direction: column;
     border-radius: 5%;
     
 }
 
 ol {
-        list-style: none; /* Elimina la numeración de la lista */
-        padding: 0; /* Elimina el espacio interno de la lista */
-        margin: 0; /* Elimina el espacio externo de la lista */
+        list-style: none; 
+        padding: 0;
+        margin: 0; 
     }
     
 .preciototal{
@@ -192,3 +195,121 @@ ol {
     color: white;
     margin-right: 15px;
 }
+
+.eliminar {
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    width: 14px;
+    height: 14px;
+    position:absolute;
+    margin-left: 5px;
+  }
+  
+  .eliminar:hover {
+    background-color: darkred;
+  }
+  
+  .contador{
+      display: flex;
+      color: white;
+      position: absolute;
+      margin-left: -10px;
+      margin-top: -10px;
+  }
+
+  footer{
+      background-color:rgba(255, 255, 0, 0.699);
+      width:100%;
+      height: 20px;
+     
+  }
+
+  .detalleOculto {
+    display: none;
+    background-color: yellow;
+    max-width: 500px; 
+    height: auto; 
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); 
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.835), 0px 8px 10px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  /* Estilos adicionales para pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    .detalleOculto {
+      width: 90%; 
+      max-width: none; 
+      left: 5%; 
+      transform: translateX(0); 
+    }
+  }
+  
+  .botonCerrar{
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 14px;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      box-shadow: black 1px 2px 1px;
+  }
+
+  .nombreDetalle{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .precioDetalle{
+    text-align: center;
+  }
+  .imagenDetalle{
+      margin: 0 auto ;
+  }
+
+  .descripcionDetalle{
+      background-color: #007bffd7;
+      color: white;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      margin-top:20px ;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+  }
+
+  .agregarDetalle{
+    background-color: #007bff;
+    border-radius: 15px;
+    display: flex;
+    font-size: 20px;
+    color: white;
+    margin: 0 auto ;
+    margin-top: 10px;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: black 1px 2px 1px;
+    cursor: pointer;
+  }
+
+  .agregarDetalle:hover{
+    background-color: #f1d03d;
+    color: black;
+    
+  }
