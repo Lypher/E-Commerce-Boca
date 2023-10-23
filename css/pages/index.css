@@ -5,6 +5,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 li {
@@ -16,6 +17,7 @@ li {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
     
 }
 
@@ -70,6 +72,10 @@ li i {
     align-items: center;
     padding: 0 20px; 
   }
+.header a{
+  text-decoration: none;
+  color: yellow;
+}
   
   .titulo {
     color: yellow;
@@ -155,63 +161,78 @@ li i {
     height: 35px;
     color: white;
 }
+
+/* ------CARRITO --- */
 .carritoOculto {
-    position: absolute; 
-    top: 1;
-    right: 0;
-    background-color: #fff; 
-    border: 1px solid #000; 
-    z-index: 1; 
-    display: none; 
-    padding: 10px; 
-    flex-direction: column;
-    border-radius: 5%;
-    
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: #fff; 
+  border: 1px solid #000; 
+  z-index: 1; 
+  display: flex; 
+  padding: 10px; 
+  flex-direction: column;
+  border-radius: 5%;
+  max-width: 400px; /* Ancho máximo del carrito */
+  width: 80%; /* Ajustar el ancho a tu preferencia */
+  text-align: center; /* Centrar el contenido del carrito */
+}
+.carrito a{
+  text-decoration: none;
+  color: white;
 }
 
 ol {
-        list-style: none; 
-        padding: 0;
-        margin: 0; 
-    }
-    
-.preciototal{
-    
-    background-color: blue;
-    color: rgb(230, 230, 126);
+  list-style: none; 
+  padding: 0;
+  margin: 0; 
 }
 
-.finalizarCompra{
-    background-color:green;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    margin-left: 30%;
-    display:flex;
-   
+.preciototal {
+  background-color: blue;
+  color: rgb(230, 230, 126);
 }
 
-#carrito{
-    color: white;
-    margin-right: 15px;
+.finalizarCompra {
+  background-color: green;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px; /* Separación desde arriba */
+}
+
+.vaciarCarrito {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px; /* Separación desde arriba */
+}
+
+#carrito {
+  color: white;
+  margin-right: 15px;
 }
 
 .eliminar {
-    background-color: red;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    font-size: 12px;
-    width: 14px;
-    height: 14px;
-    position:absolute;
-    margin-left: 5px;
-  }
-  
-  .eliminar:hover {
-    background-color: darkred;
-  }
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.eliminar:hover {
+  background-color: darkred;
+}
+
   
   .contador{
       display: flex;
@@ -312,4 +333,8 @@ ol {
     background-color: #f1d03d;
     color: black;
     
+  }
+
+  body{
+    overflow-x: hidden;
   }

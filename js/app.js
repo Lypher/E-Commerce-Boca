@@ -1,7 +1,5 @@
 //Variables:
 
-const carrito = [];
-
 const catalogo = async () => {
   try {
     const respuesta = await fetch("data/productos.json");
@@ -64,16 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // AGREGAR AL CARRITO:
         agregarAlCarrito.onclick = function agregarAlCarrito() {
-          const carritoDOM = document.getElementsByClassName("carritoOculto");
-          for (let i = 0; i < carritoDOM.length; i++) {
-            carritoDOM[i].style.display = "none";
-          }
-          // Haz una copia del producto
+        
           const productoCopia = { ...producto };
 
           // Agrega la copia al carrito
           carrito.push(productoCopia);
           actualizarContadorCarrito()
+          guardarCarritoEnLocalStorage()
 
           alert(productoCopia.nombre + " agregado al carrito");
 
@@ -116,89 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-function crearElementoCarrito(producto) {
-  const li = document.createElement("li");
-  li.textContent = `${producto.nombre} ($${producto.precio})`;
 
-  const olCarrito = document.getElementsByClassName("olCarrito")[0];
-  // Agregar un botón para eliminar el producto del carrito
-  const eliminarBtn = document.createElement("button");
-  eliminarBtn.textContent = "x";
-  eliminarBtn.classList.add("eliminar");
-  eliminarBtn.onclick = () => {
-    eliminarDelCarrito(producto);
-  };
-
-  li.appendChild(eliminarBtn);
-  olCarrito.appendChild(li);
-}
-
-function eliminarDelCarrito(producto) {
-  const productoIndex = carrito.findIndex((item) => item.nombre === producto.nombre);
-
-  if (productoIndex !== -1) {
-    carrito.splice(productoIndex, 1);
-    actualizarContadorCarrito()
-    MostrarCarrito();
-  }
-}
-
-function MostrarCarrito() {
-  console.log("MostrarCarrito() llamada");
-
-  const carritoDOM = document.getElementsByClassName("carritoOculto");
-  for (let i = 0; i < carritoDOM.length; i++) {
-    if (carritoDOM[i].style.display === "none" || carritoDOM[i].style.display === "") {
-      carritoDOM[i].style.display = "flex";
-    } else {
-      carritoDOM[i].style.display = "none";
-    }
-  }
-
-  const olCarrito = document.getElementsByClassName("olCarrito")[0];
-
-  olCarrito.innerHTML = "";
-
-  const carritoMostrar = [];
-  let precioTotal = 0;
-
-  carrito.forEach((producto) => {
-    carritoMostrar.push(producto);
-    precioTotal += producto.precio;
-  });
-
-  if (carritoMostrar.length === 0) {
-    const parrafoVacio = document.createElement("p");
-    parrafoVacio.textContent = "(Carrito vacío)";
-    olCarrito.appendChild(parrafoVacio);
-  } else {
-    carritoMostrar.forEach((producto) => {
-      crearElementoCarrito(producto);
-    });
-
-    const liPrecioTotal = document.createElement("li");
-    liPrecioTotal.textContent = `Precio Total: $${precioTotal}`;
-    liPrecioTotal.className = "preciototal";
-    olCarrito.appendChild(liPrecioTotal);
-
-    const botonComprar = document.createElement("button");
-    botonComprar.textContent = "Finalizar Compra";
-    botonComprar.className = "finalizarCompra";
-    botonComprar.onclick = finalizarCompra = () => {
-      alert("Compra Realizada con éxito!");
-      location.reload();
-    };
-    olCarrito.appendChild(botonComprar);
-  }
-}
-
-//Funcion que muestra el numero al lado de carrito:
-function actualizarContadorCarrito() {
-  const contadorElement = document.querySelector(".contador");
-  if (contadorElement) {
-    contadorElement.textContent = carrito.length.toString();
-  }
-}
 
 function verMas(producto) {
   const productoAMostrar = document.querySelector(".detalleOculto");
